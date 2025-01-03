@@ -1,0 +1,128 @@
+/* ####################### */
+/* Author: Herry Saptiawan */
+
+/* Mengatur margin, padding, dan box-sizing agar konsisten di seluruh elemen */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Mengatur tampilan body */
+body {
+    font-family: "Francois One", serif; /* Menggunakan font "Francois One" */
+    display: flex;
+    justify-content: center; /* Menyusun elemen secara horizontal di tengah */
+    align-items: center;     /* Menyusun elemen secara vertikal di tengah */
+    height: 100vh;           /* Mengatur tinggi body untuk mengisi seluruh viewport */
+    color: whitesmoke;          /* Warna teks putih */
+    text-align: center;      /* Menyelaraskan teks di tengah */
+    font-weight: bold;       /* Membuat teks menjadi tebal */
+}
+
+/* Mengatur ukuran dan gaya font untuk elemen tahun baru */
+#new-year-year {
+    font-size: 25rem; /* Ukuran font besar */
+}
+
+/* Menata countdown container */
+#countdown-container {
+    display: flex;
+    justify-content: center; /* Menyusun elemen di tengah secara horizontal */
+    gap: 100px;               /* Menambahkan jarak antara elemen */
+    font-size: 20rem;        /* Ukuran font sangat besar */
+    position: fixed;         /* Menempelkan countdown di posisi tetap */
+    align-items: center;     /* Menyusun elemen secara vertikal di tengah */
+}
+
+/* Menata elemen waktu */
+.time {
+    display: inline-block;
+    text-transform: uppercase; /* Menyusun teks menjadi kapital semua */
+    letter-spacing: .15rem;    /* Memberikan jarak antar huruf */
+}
+
+/* Menata elemen waktu individual */
+.time p {
+    font-size: 2.5rem; /* Ukuran font p di dalam .time */
+}
+
+/* Menata container untuk kembang api */
+.fireworks-container {
+    background-image: url('../assets/bg.jpg'); /* Gambar latar belakang yang sama dengan body */
+    position: fixed;         /* Posisi tetap agar selalu terlihat */
+    width: 100%;             /* Memastikan lebar 100% dari layar */
+    height: 100%;            /* Memastikan tinggi 100% dari layar */
+    background-position: center; /* Gambar latar belakang berada di tengah */
+    background-size: cover;  /* Gambar latar belakang menutupi layar */
+    background-repeat: no-repeat; /* Menghindari pengulangan gambar */
+    z-index: -1;             /* Menempatkan kembang api di bawah konten utama */
+}
+
+/* Overlay transparan di atas kembang api */
+.overlay {
+    position: absolute; /* Posisi absolut agar menutupi seluruh layar */
+    background-color: rgba(0, 0, 0, 1); /* Memberikan efek transparansi */
+}
+
+/* Mengatur tampilan teks untuk "Happy New Year" */
+#happy-new-year h1 {
+    font-size: 10rem; /* Ukuran font untuk h1 di dalam #happy-new-year */
+    font-family: "Bonheur Royale", serif;
+    font-weight: 500;
+    font-style: normal;
+}
+
+/* Mengatur font dan gaya untuk elemen tahun baru */
+#new-year-year {
+    font-size: 25rem; /* Ukuran font yang sangat besar */
+    font-family: "Bangers", serif; /* Menggunakan font Bangers */
+    font-weight: 400; /* Berat font normal */
+    font-style: normal; /* Gaya font normal */
+}
+
+/* Animasi untuk elemen dengan kelas 'scale' */
+.scale {
+    animation: scaleOpacityAnimation 1s ease-in-out infinite; /* Animasi infinite dengan durasi 1 detik */
+}
+
+/* Keyframes untuk animasi scale dan opacity */
+@keyframes scaleOpacityAnimation {
+    0% {
+        transform: scale(0); /* Memulai dengan skala 0 (tidak terlihat) */
+        opacity: 0;           /* Memulai dengan transparansi 0 */
+    }
+    50% {
+        transform: scale(1); /* Skala kembali ke ukuran normal */
+        opacity: 1;           /* Opasitas penuh */
+    }
+    75% {
+        transform: scale(1.5); /* Membesarkan sedikit */
+        opacity: 0;            /* Mengurangi transparansi */
+    }
+    100% {
+        transform: scale(5);   /* Membesarkan lebih besar */
+        opacity: 0;            /* Menghilang sama sekali */
+    }
+}
+
+/* Animasi untuk elemen dengan kelas 'fadeIn' */
+.fadeIn {
+    animation: fadeInAnimation 1s ease-in-out normal; /* Animasi satu kali untuk fade in */
+}
+
+/* Keyframes untuk animasi fade in */
+@keyframes fadeInAnimation {
+    0% {
+        transform: scale(0); /* Memulai dengan skala 0 (tidak terlihat) */
+        opacity: 0;           /* Memulai dengan transparansi 0 */
+    }
+    75% {
+        transform: scale(1.2); /* Sedikit membesar */
+        opacity: 1;            /* Opasitas penuh */
+    }
+    100% {
+        transform: scale(1);   /* Kembali ke ukuran normal */
+        opacity: 1;            /* Opasitas penuh */
+    }
+}
