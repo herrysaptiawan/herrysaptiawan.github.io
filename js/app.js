@@ -15,7 +15,7 @@ const second = 1000,        // 1 detik = 1000 ms
 // let new_year = "January 03, 2025 22:31:40", // Tanggal target New Year
 
 // Set tanggal target untuk New Year
-let new_year = "January 01, 2025 00:00:00", // Tanggal target New Year
+let new_year = "January 01, 2026 00:00:00", // Tanggal target New Year
 
 // Mendapatkan tahun yang akan datang secara otomatis berdasarkan tanggal target
     comingYear = new Date(new_year).getFullYear();
