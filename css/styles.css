@@ -126,3 +126,53 @@ body {
         opacity: 1;            /* Opasitas penuh */
     }
 }
+
+/* Media Queries untuk Responsivitas */
+@media (max-width: 1200px) {
+    #new-year-year {
+        font-size: 20rem;
+    }
+    #countdown-container {
+        font-size: 8rem;
+        gap: 80px;
+    }
+    #happy-new-year h1 {
+        font-size: 8rem;
+    }
+    .time p {
+        font-size: 1.5rem;
+    }
+}
+
+@media (max-width: 768px) {
+    #new-year-year {
+        font-size: 15rem;
+    }
+    #countdown-container {
+        font-size: 5rem;
+        gap: 30px;
+    }
+    #happy-new-year h1 {
+        font-size: 6rem;
+    }
+    .time p {
+        font-size: 1.3rem;
+    }
+}
+
+@media (max-width: 480px) {
+    #new-year-year {
+        font-size: 10rem;
+    }
+    #countdown-container {
+        font-size: 5rem;
+        flex-direction: column;
+        gap: 30px;
+    }
+    #happy-new-year h1 {
+        font-size: 4rem;
+    }
+    .time p {
+        font-size: 1.5rem;
+    }
+}
